@@ -1,0 +1,26 @@
+{
+  "name": "vscode-eslint-issue-1994",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "workspaces": [
+    "packages/*",
+    "apps/*"
+  ],
+  "scripts": {
+    "lint": "turbo run lint",
+    "ts-check": "turbo run ts-check",
+    "preinstall": "npx only-allow pnpm"
+  },
+  "devDependencies": {
+    "prettier": "^3.5.3",
+    "prettier-airbnb-config": "^1.0.0",
+    "turbo": "1.12.5",
+    "typescript": "^5.8.3"
+  },
+  "engines": {
+    "node": ">=20.12.2 <21",
+    "npm": "Please use pnpm",
+    "yarn": "Please use pnpm"
+  }
+}

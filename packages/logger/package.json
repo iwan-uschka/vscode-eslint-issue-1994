@@ -1,0 +1,27 @@
+{
+  "name": "@repo/logger",
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "lint": "eslint .",
+    "ts-check": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@repo/ui": "workspace:*",
+    "pino": "8.15.6",
+    "lodash": "4.17.21",
+    "next": "14.2.13"
+  },
+  "devDependencies": {
+    "@eslint/compat": "1.2.8",
+    "@repo/eslint-config": "workspace:*",
+    "@repo/tsconfig": "workspace:*",
+    "@typescript-eslint/parser": "8.31.0",
+    "eslint": "9.25.0",
+    "typescript": "^5.8.3",
+    "vitest": "^3.0.9",
+    "@testing-library/jest-dom": "6.6.3",
+    "react": "18.2.0",
+    "@types/node": "20.8.8"
+  }
+}

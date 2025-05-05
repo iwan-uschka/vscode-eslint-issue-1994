@@ -1,0 +1,11 @@
+{
+  "extends": "@repo/tsconfig/nextjs.json",
+  "exclude": [".turbo", "node_modules"],
+  "include": ["**/*.ts", "**/*.tsx"],
+  "compilerOptions": {
+    "baseUrl": "./",
+    "paths": {
+      "@repo/*": ["../../packages/*"]
+    }
+  }
+}

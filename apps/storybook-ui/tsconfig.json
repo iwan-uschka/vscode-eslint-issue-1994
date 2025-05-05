@@ -1,0 +1,12 @@
+{
+  "extends": "@repo/tsconfig/nextjs.json",
+  "exclude": ["dist", "storybook-static", "node_modules", ".turbo"],
+  "include": ["**/*.ts", "**/*.tsx", "./.storybook/**/*.ts", "./.storybook/**/*.tsx"],
+  "compilerOptions": {
+    "baseUrl": "./",
+    "paths": {
+      "storybook-ui/*": ["./*"],
+      "@repo/*": ["../../packages/*"]
+    }
+  }
+}
