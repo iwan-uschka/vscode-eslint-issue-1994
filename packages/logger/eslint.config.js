@@ -8,6 +8,7 @@ import nextjsConfig from '@repo/eslint-config/nextjs';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 const gitignorePath = path.resolve(__dirname, '.gitignore');
+const tsConfigEsLintPath = path.resolve(__dirname, 'tsconfig.eslint.json');
 
 const config = [
   ...nextjsConfig,
@@ -17,6 +18,15 @@ const config = [
     languageOptions: {
       parser: typescriptParser,
       parserOptions: { project: 'tsconfig.eslint.json', tsconfigRootDir: __dirname },
+    },
+  },
+  {
+    settings: {
+      'import/resolver': {
+        typescript: {
+          project: tsConfigEsLintPath,
+        },
+      },
     },
   },
 ];
